@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #FAF8F5;
+    color: #0F172A;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F0EA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C7B7E9;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8C6ECD;
+}
+
+/* Glassmorphism subtle card effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(224, 216, 243, 0.5);
+}
+
+.glass-nav {
+  background: rgba(253, 252, 250, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(224, 216, 243, 0.4);
+}
+
+/* Subtle animation pulses */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Badge glow */
+.badge-glow {
+  box-shadow: 0 0 15px -3px rgba(140, 110, 205, 0.3);
+}
+
